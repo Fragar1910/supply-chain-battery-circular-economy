@@ -1,0 +1,203 @@
+# ============================================================================
+# Battery Circular Economy - .gitignore
+# ============================================================================
+
+# ============================================================================
+# Node.js Dependencies
+# ============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ============================================================================
+# Build Outputs
+# ============================================================================
+
+# Next.js
+web/.next/
+web/out/
+web/dist/
+
+# Foundry/Forge
+sc/out/
+sc/cache/
+sc/broadcast/
+
+# General build artifacts
+build/
+dist/
+*.tsbuildinfo
+
+# ============================================================================
+# Environment Variables & Secrets
+# ============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Private keys (CRITICAL - never commit!)
+*.key
+*.pem
+*.p12
+privateKeys.json
+secrets.json
+
+# ============================================================================
+# IDE & Editors
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ============================================================================
+# Testing & Coverage
+# ============================================================================
+
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/
+lcov.info
+
+# Playwright
+web/test-results/
+web/playwright-report/
+web/playwright/.cache/
+
+# Jest
+jest-coverage/
+
+# ============================================================================
+# Logs
+# ============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# ============================================================================
+# Blockchain Specific
+# ============================================================================
+
+# Hardhat (if used)
+cache/
+artifacts/
+
+# Deployment artifacts (keep deployed-addresses.json but ignore others)
+# deployed-addresses.json is needed for frontend
+deployments/localhost/
+deployments/anvil/
+
+# Local blockchain data
+anvil-data/
+.anvil/
+
+# Transaction receipts
+receipts/
+
+# ============================================================================
+# Package Manager Locks (optional - comment out if you want to commit them)
+# ============================================================================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================================================
+# Documentation Build Outputs (KEEP .md source files!)
+# ============================================================================
+# We keep ALL .md files as documentation
+# Only ignore generated doc outputs:
+docs/build/
+docs/dist/
+
+# ============================================================================
+# Vercel Deployment
+# ============================================================================
+.vercel
+.vercel.json
+
+# ============================================================================
+# TypeScript
+# ============================================================================
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+
+# Claude AI workspace (optional - keep if useful)
+# .claude/
+
+# Playwright MCP
+# .playwright-mcp/
+
+# Git attributes
+# .gitattributes
