@@ -59,21 +59,56 @@ useEffect(() => {
     setToastId(undefined);
     reset();
   }
-}, [confirmError, toastId, toast, reset]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [confirmError, toastId]); // toast, reset removed - stable functions to prevent infinite loops
 ```
+
+### 4. ⚠️ CRITICAL: Prevent Infinite Loops
+**Remove stable functions from useEffect dependencies to prevent "Maximum update depth exceeded" errors:**
+
+```typescript
+// ❌ WRONG - Causes infinite loops
+useEffect(() => {
+  if (error && toastId) {
+    toast.transactionError('Error');
+    reset();
+  }
+}, [error, toastId, toast, reset]); // ❌ toast and reset cause loops
+
+// ✅ CORRECT - No infinite loops
+useEffect(() => {
+  if (error && toastId) {
+    toast.transactionError('Error');
+    reset();
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [error, toastId]); // ✅ Only values that change, not stable functions
+```
+
+**Functions to REMOVE from dependencies:**
+- `toast` (from useToast hook)
+- `reset` (from wagmi hooks)
+- `router` (from Next.js)
+- `refetch` (from React Query)
+- Optional callbacks: `onSuccess?.()`, `onError?.()`
 
 ## Forms Already Fixed ✅
 
-1. **TransferOwnershipForm.tsx** - Lines 55-66, 183-216
-2. **RegisterBatteryForm.tsx** - Lines 50-61, 116-149
+1. **TransferOwnershipForm.tsx** - Lines 151-246 ✅ 2024-12-22 (Infinite loop fix)
+2. **AcceptTransferForm.tsx** - Lines 144-239 ✅ 2024-12-22 (Infinite loop fix)
+3. **RegisterBatteryForm.tsx** - Lines 50-61, 116-149
+4. **IntegrateBatteryForm.tsx** - Lines 66-77, 133-168 ✅ 2024-12-21
+5. **RecycleBatteryForm.tsx** - Lines 98-109, 166-201 ✅ 2024-12-21
+6. **StartSecondLifeForm.tsx** - Lines 84-95, 152-187 ✅ 2024-12-21
+7. **UpdateSOHForm.tsx** - Lines 54-65, 146-181 ✅ 2024-12-21
 
-## Forms Pending Update ⏳
+## All Forms Fixed! 🎉
 
-Need to apply the same changes to:
-- [ ] IntegrateBatteryForm.tsx
-- [ ] RecycleBatteryForm.tsx
-- [ ] StartSecondLifeForm.tsx
-- [ ] UpdateSOHForm.tsx
+All transaction forms now have:
+- ✅ Retry logic (3 retries, 1s delay)
+- ✅ 30-second timeout safety net
+- ✅ Better error messages for reverted transactions
+- ✅ **NO infinite loops** (stable functions removed from dependencies)
 
 ## Testing
 
@@ -81,4 +116,10 @@ After applying fixes, test with unauthorized transaction:
 1. Try to transfer a battery you don't own
 2. Expected: Toast shows "Transaction reverted..." after max 30 seconds
 3. Previous: Toast stuck on "Confirming transaction..." forever
+4. **NEW**: No "Maximum update depth exceeded" errors
+5. **NEW**: Toast dismisses properly, no infinite loops
+
+## Related Fixes
+
+- **INFINITE_LOOP_FIX.md** - Details on fixing "Maximum update depth exceeded" errors by removing stable functions from useEffect dependencies
 
