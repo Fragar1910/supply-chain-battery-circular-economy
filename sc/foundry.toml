@@ -1,0 +1,56 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+script = "script"
+
+# Solidity compiler settings
+solc_version = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+via_ir = true
+
+# File system permissions for writing deployment artifacts
+fs_permissions = [
+    { access = "read-write", path = "./deployments" },
+    { access = "read-write", path = "../web/src/config" }
+]
+
+# Remappings for OpenZeppelin
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "forge-std/=lib/forge-std/src/"
+]
+
+# Gas reporting
+gas_reports = ["*"]
+gas_reports_ignore = []
+
+# Testing
+fuzz = { runs = 256 }
+invariant = { runs = 256 }
+
+# Coverage
+coverage = { enabled = true }
+
+# Formatter
+[fmt]
+line_length = 120
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "all"
+quote_style = "double"
+number_underscore = "thousands"
+
+# RPC endpoints for deployment (to be configured later)
+[rpc_endpoints]
+# mumbai = "${MUMBAI_RPC_URL}" # Polygon Mumbai testnet
+# polygon = "${POLYGON_RPC_URL}" # Polygon mainnet
+
+# Etherscan API keys for verification
+[etherscan]
+# polygon = { key = "${POLYGONSCAN_API_KEY}" }

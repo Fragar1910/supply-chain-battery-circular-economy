@@ -1,0 +1,708 @@
+{
+  "config": {
+    "configFile": "/Users/paco/Documents/CodeCrypto/PFM_Traza_Fragar/supply-chain-battery-circular-economy/web/playwright.config.ts",
+    "rootDir": "/Users/paco/Documents/CodeCrypto/PFM_Traza_Fragar/supply-chain-battery-circular-economy/web/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/paco/Documents/CodeCrypto/PFM_Traza_Fragar/supply-chain-battery-circular-economy/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/paco/Documents/CodeCrypto/PFM_Traza_Fragar/supply-chain-battery-circular-economy/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests/01-basic-navigation.spec.ts",
+      "file": "tests/01-basic-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Basic Navigation",
+          "file": "tests/01-basic-navigation.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load home page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bc0f915479537a6ad4fe-fb1d7644f32e7d7cc3f4",
+              "file": "tests/01-basic-navigation.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "should display all stakeholder sections",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bc0f915479537a6ad4fe-b4a7032d81460996a2e3",
+              "file": "tests/01-basic-navigation.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "should show connect wallet message when accessing dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bc0f915479537a6ad4fe-0cd2e81b2f7e2148f3aa",
+              "file": "tests/01-basic-navigation.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should navigate to passport page (shows not found without wallet)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bc0f915479537a6ad4fe-fb3de7ce11e42aba3c66",
+              "file": "tests/01-basic-navigation.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "should have working \"Go Back\" button from dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bc0f915479537a6ad4fe-a5a4a9812cd0530d48c4",
+              "file": "tests/01-basic-navigation.spec.ts",
+              "line": 74,
+              "column": 7
+            },
+            {
+              "title": "should have no critical console errors on home page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bc0f915479537a6ad4fe-4c7ff52aae99890713c4",
+              "file": "tests/01-basic-navigation.spec.ts",
+              "line": 86,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests/02-blockchain-validation.spec.ts",
+      "file": "tests/02-blockchain-validation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Blockchain Environment Validation",
+          "file": "tests/02-blockchain-validation.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should have deployed addresses configuration",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-d425ca0011a05467d96a",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should have correct seed battery BINs defined",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-b2000d9d7aca305b0af5",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "should have contracts configuration in frontend",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-fa715821e3fbb5c2efdd",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 52,
+              "column": 7
+            },
+            {
+              "title": "should load deployed addresses in config",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-04c0c83b98568558fe81",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 65,
+              "column": 7
+            },
+            {
+              "title": "should have all 9 batteries referenced in dashboard code",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-9cd8cf6ae4f273940256",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 79,
+              "column": 7
+            },
+            {
+              "title": "should have supply chain traceability fix implemented",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-29576de520c68b5cbc9b",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 95,
+              "column": 7
+            },
+            {
+              "title": "should have nonce error handling in TransferOwnershipForm",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-31650603b3d801f0e401",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "should have ChangeBatteryStateForm integrated in UpdateSOHForm",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-fd9abb104b72987d6d8e",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 130,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Environment Health Checks",
+          "file": "tests/02-blockchain-validation.spec.ts",
+          "line": 152,
+          "column": 6,
+          "specs": [
+            {
+              "title": "frontend should be running",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-555189a13660b6631564",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 153,
+              "column": 7
+            },
+            {
+              "title": "should load without critical errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-c98b7d9bb0a96ceb0d35",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 158,
+              "column": 7
+            },
+            {
+              "title": "should have proper meta tags",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fba7b52121bf2b9f2b57-e4e33ad78140a1a8b8ee",
+              "file": "tests/02-blockchain-validation.spec.ts",
+              "line": 172,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests/03-wallet-mock-validation.spec.ts",
+      "file": "tests/03-wallet-mock-validation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Wallet Mock Infrastructure",
+          "file": "tests/03-wallet-mock-validation.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should inject window.ethereum with mock provider",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-051e9ac1f5757e639f30",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should configure mock wallet with correct properties",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-d7fd13480b8c7bbaf66f",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should handle eth_requestAccounts RPC call",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-0e6538187fa45ee7690a",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "should handle eth_chainId RPC call",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-f5d2a50142a82ee02c09",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "should handle personal_sign RPC call",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-6583d02316b30ba08f40",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 104,
+              "column": 7
+            },
+            {
+              "title": "should handle eth_getBalance RPC call",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-dec65a4c433477b47beb",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 127,
+              "column": 7
+            },
+            {
+              "title": "should work with different accounts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-237b098dc882603b8bad",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 150,
+              "column": 7
+            },
+            {
+              "title": "should log mock wallet requests to console",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-f6f93392145e21a62d88",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 169,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Wallet Mock Limitations",
+          "file": "tests/03-wallet-mock-validation.spec.ts",
+          "line": 205,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should document wagmi/rainbowkit integration limitation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-d8c0118b2723fcf45e1a",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 206,
+              "column": 7
+            },
+            {
+              "title": "should verify core RPC methods are implemented",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-feca6fc9c2f129ca64a3",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 237,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Manual Testing Preparation",
+          "file": "tests/03-wallet-mock-validation.spec.ts",
+          "line": 295,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should document manual testing workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d648d1f77cac5ad59536-80ffc08f26d13a07bb4b",
+              "file": "tests/03-wallet-mock-validation.spec.ts",
+              "line": 296,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-26T16:15:49.331Z",
+    "duration": 105.553,
+    "expected": 0,
+    "skipped": 28,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
